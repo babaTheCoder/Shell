@@ -15,16 +15,19 @@ if (is_interactive)
 write(STDOUT_FILENO, "Mark>> ", 7);
 }
 
-void null_after_comment(char *str, size_t length) {
+void null_after_comment(char *str, size_t length)
+{
 /* Locate the '#' symbol */
 char *comment_pos;
 size_t comment_index;
 
 comment_pos = custom_strchr(str, '#');
-if (comment_pos != NULL) {
+if (comment_pos != NULL)
+{
 /* Nullify the rest of the string after the '#' symbol */
 comment_index = comment_pos - str;
-if (comment_index < length) {
+if (comment_index < length)
+{
 str[comment_index] = '\0';
 }
 }
