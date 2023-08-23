@@ -114,7 +114,8 @@ return (0); /* Path does not exist */
 
 /**
  * execute_exit - Executes the "exit" command to terminate the shell.
- * @args: List of arguments, where args[0] is "exit" command and args[1] (if present) is the exit status.
+ * @args: List of arguments, where args[0] is "exit" command and
+ * args[1] (if present) is the exit status.
  *
  * Return: None.
  */
@@ -126,7 +127,8 @@ if (args[1] != NULL)
 {
 exit_status = custom_atoi(args[1]);
 exit(exit_status);
-} else
+}
+else
 {
 exit(EXIT_SUCCESS);
 }
