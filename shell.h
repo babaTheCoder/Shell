@@ -170,6 +170,18 @@ void nullify_command(char *command);
 
 int execute_exit_command(char **args);
 
+int path_exists(const char *path);
+
+int execute_exit(char **args);
+
+void run_non_interactive_mode(const char *filename);
+
+void execute_nonint_command(char *line);
+
+char *process_line(char *line, size_t len, FILE *file);
+
+FILE *open_file(const char *filename);
+
 /**
  * custom_strlen - Calculate the length of a string.
  * @str: The input string.
